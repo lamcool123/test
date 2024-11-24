@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -12,15 +12,11 @@
 
     <!-- Sidebar Navigation -->
     <div class="navbar" id="navbar">
-        <!-- Toggle button for collapsing the navbar -->
-        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-
-        <!-- Content of the Navbar -->
-        <div class="nav-content">
-            <a href="#home" class="active"><span>Trang chủ</span></a>
-            <a href="kho_anh.html"><span>Kho ảnh và video</span></a> <!-- Link to kho_anh.html -->
-            <button class="login-btn" onclick="openSearchPopup()"><span>Tìm học sinh</span></button>
-        </div>
+        <a href="javascript:void(0)" class="toggle-btn" onclick="toggleSidebar()">☰</a>
+        <a href="index.html" class="active"><span>Trang chủ</span></a>
+        <a href="kho_anh.html"><span>Kho ảnh và video</span></a>
+        <a href="hoc_sinh.html"><span>Thông Tin Học Sinh</span></a>
+        <button class="login-btn" onclick="openSearchPopup()"><span>Tìm học sinh</span></button>
     </div>
 
     <!-- Main Content Wrapper -->
@@ -34,7 +30,15 @@
         <div class="home-section" id="home">
             <h2>Nơi xả ảnh của a3-K64-CBQ</h2>
             <p>Dòng thời gian của lớp!</p>
-            <a href="kho_anh.html" class="view-gallery-link">Xem Kho ảnh và Video</a> <!-- Link to kho_anh.html -->
+            <a href="kho_anh.html">Xem Kho ảnh và Video</a>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section" id="gallery">
+            <h2>Nơi lưu giữ ảnh của 10A3</h2>
+            <div class="gallery">
+                <!-- Photos and videos will be dynamically inserted here -->
+            </div>
         </div>
 
         <!-- Tìm học sinh Popup -->
