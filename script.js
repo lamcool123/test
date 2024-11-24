@@ -1383,3 +1383,27 @@ function openSearchPopup() {
 function closeSearchPopup() {
     document.getElementById('searchPopup').style.display = 'none';
 }
+// Toggle Sidebar Visibility
+function toggleSidebar() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('active');
+}
+
+// Open Search Popup
+function openSearchPopup() {
+    const popup = document.getElementById('searchPopup');
+    popup.style.display = 'flex';  // Changed to 'flex' to center the popup properly
+}
+
+// Close Search Popup
+function closeSearchPopup() {
+    const popup = document.getElementById('searchPopup');
+    popup.style.display = 'none';
+}
+
+// Search Student Function (dummy implementation)
+function searchStudent() {
+    const birthdate = document.getElementById('birthdate').value;
+    // Implement search logic here
+    alert(`Tìm học sinh với ngày sinh: ${birthdate}`);
+}
