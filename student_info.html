@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Học Sinh</title>
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="hoc_sinh.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="navbar" id="navbar">
+        <a href="javascript:void(0)" class="toggle-btn" onclick="toggleSidebar()">☰</a>
+        <a href="index.html"><span>Trang chủ</span></a>
+        <a href="kho_anh.html"><span>Kho ảnh và video</span></a>
+        <a href="hoc_sinh.html" class="active"><span>Thông Tin Học Sinh</span></a>
+        <button class="login-btn" onclick="openSearchPopup()"><span>Tìm học sinh</span></button>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content" id="mainContent">
+        <!-- Header Section -->
+        <header>
+            <h1>Thông Tin Học Sinh</h1>
+        </header>
+
+        <!-- Student Information Section -->
+        <div class="student-info-section">
+            <h2>Chi Tiết Học Sinh</h2>
+            <p>Hãy nhập thông tin chi tiết của học sinh và lưu lại.</p>
+            <form id="studentForm">
+                <label for="name">Tên Học Sinh:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="birthdate">Ngày Tháng Năm Sinh:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+
+                <label for="hobby">Sở Thích:</label>
+                <textarea id="hobby" name="hobby" rows="4"></textarea>
+
+                <button type="button" onclick="saveStudentInfo()">Lưu Thông Tin</button>
+            </form>
+        </div>
+
+        <!-- Tìm học sinh Popup -->
+        <div id="searchPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closeSearchPopup()">&times;</span>
+                <h2>Tìm Học Sinh</h2>
+                <form id="searchStudentForm">
+                    <label for="birthdate">Ngày Tháng Năm Sinh:</label>
+                    <input type="date" id="searchBirthdate" required>
+                    <button type="button" onclick="searchStudent()">Tìm</button>
+                </form>
+                <p id="searchErrorMessage" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>Copyright by Rạp Siếc TW!</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript File Link -->
+    <script src="hoc_sinh.js"></script>
+
+</body>
+</html>

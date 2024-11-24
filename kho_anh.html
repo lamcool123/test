@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho Ảnh và Video</title>
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="kho_anh.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="navbar" id="navbar">
+        <a href="javascript:void(0)" class="toggle-btn" onclick="toggleSidebar()">☰</a>
+        <a href="index.html"><span>Trang chủ</span></a>
+        <a href="kho_anh.html" class="active"><span>Kho ảnh và video</span></a>
+        <a href="hoc_sinh.html"><span>Thông Tin Học Sinh</span></a>
+        <button class="login-btn" onclick="openSearchPopup()"><span>Tìm học sinh</span></button>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content" id="mainContent">
+        <!-- Header Section -->
+        <header>
+            <h1>Kho Ảnh và Video của 10A3</h1>
+        </header>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <h2>Đăng Tải Ảnh và Video</h2>
+            <input type="file" id="fileUpload" accept="image/*,video/*">
+            <button onclick="uploadMedia()">Đăng tải</button>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section">
+            <h2>Nơi lưu giữ ảnh của 10A3</h2>
+            <div class="gallery">
+                <!-- Photos and videos will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Tìm học sinh Popup -->
+        <div id="searchPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closeSearchPopup()">&times;</span>
+                <h2>Tìm Học Sinh</h2>
+                <form id="searchStudentForm">
+                    <label for="birthdate">Ngày Tháng Năm Sinh:</label>
+                    <input type="date" id="searchBirthdate" required>
+                    <button type="button" onclick="searchStudent()">Tìm</button>
+                </form>
+                <p id="searchErrorMessage" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>Copyright by Rạp Siếc TW!</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript File Link -->
+    <script src="kho_anh.js"></script>
+
+</body>
+</html>

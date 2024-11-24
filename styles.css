@@ -1,0 +1,1333 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+.navbar .login-btn {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .login-btn:hover {
+    background-color: #e68900;
+}
+
+/* Home Section Styles */
+.home-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.home-section h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.home-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.home-section a {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.home-section a:hover {
+    background-color: #45a049;
+}
+
+/* Kho ảnh and Kho video Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* File Upload Styles */
+.upload-container {
+    margin: 40px auto;
+    text-align: center;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-container input[type="file"] {
+    padding: 12px;
+    font-size: 1rem;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Search Form Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.popup-content form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.popup-content button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-content button:hover {
+    background-color: #45a049;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Animation for popup */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .popup-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* Auth Section Styles */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.auth-form {
+    display: none;
+    margin-top: 20px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.auth-form button:hover {
+    background-color: #45a049;
+}
+
+.toggle-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #45a049;
+}
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    letter-spacing: 1px;
+}
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+.upload-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#imageUpload {
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+/* Media Gallery Styles */
+.gallery-section {
+    margin-top: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.gallery-item video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar a, .navbar button {
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 5px;
+    border: none;
+    background-color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover, .navbar button:hover {
+    background-color: #575757;
+}
+
+/* Centering content sections */
+.student-info, .upload-section, .gallery-section {
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.student-info form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.student-info label {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.student-info input[type="text"], 
+.student-info input[type="date"], 
+.student-info textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.student-info button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.student-info button:hover {
+    background-color: #45a049;
+}
+
+/* Upload section styles */
+.upload-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.upload-section input[type="file"] {
+    display: block;
+    margin: 10px auto;
+}
+
+.upload-section button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-section button:hover {
+    background-color: #45a049;
+}
+
+/* Gallery section styling */
+.gallery-section {
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.gallery-item video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer styling */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+}
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f0f0f0;
+}
+
+/* Sidebar Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: width 0.3s;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.navbar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.navbar .active {
+    background-color: #04AA6D;
+}
+
+/* Collapsible Sidebar */
+.navbar.collapsed {
+    width: 80px;
+}
+
+.navbar a span {
+    display: inline-block;
+    transition: opacity 0.3s;
+}
+
+.navbar.collapsed a span {
+    opacity: 0;
+}
+
+/* Toggle Button for Collapsible Sidebar */
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 250px; /* Margin to account for the sidebar */
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+/* Adjust content when sidebar is collapsed */
+.main-content.collapsed {
+    margin-left: 80px;
+}
+
+/* Highlighting the Gallery Section */
+.gallery-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: highlight 1s ease-in-out infinite alternate;
+}
+
+/* Keyframes for Gallery Highlight Animation */
+@keyframes highlight {
+    0% { box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); }
+    100% { box-shadow: 0px 0px 20px rgba(255, 0, 0, 1); }
+}
+
+/* Gallery Section Styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery-item {
+    max-width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+/* Gallery Styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    max-width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img, .gallery-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Sidebar Navigation */
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    padding: 15px 20px;
+    margin: 5px 0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #575757; /* Slightly lighter background on hover */
+    padding-left: 30px; /* Increase padding to move text slightly to the right */
+    color: #ff9800; /* Change text color on hover */
+    cursor: pointer;
+}
+
+.navbar .active {
+    background-color: #4CAF50; /* Highlight active page */
+    color: white;
+}
+
+.navbar .login-btn {
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.navbar .login-btn:hover {
+    background-color: #e68900; /* Darker orange on hover */
+    padding-left: 30px; /* Increase padding to move text slightly to the right */
+}
+
+/* Add hover effect to submenu items if necessary */
+.navbar .submenu a {
+    padding-left: 25px; /* Indent submenu items */
+    font-size: 1rem;
+}
+
+.navbar .submenu a:hover {
+    background-color: #666666; /* Different hover color for submenu */
+}
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+    transition: width 0.3s;
+    overflow-x: hidden;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.collapsed {
+    width: 60px; /* Shrink width when collapsed */
+}
+
+.navbar .toggle-btn {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ddd;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.navbar .nav-links {
+    margin-top: 60px;
+}
+
+.navbar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ddd;
+    display: block;
+    transition: 0.3s;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.navbar.collapsed a {
+    text-align: center; /* Center-align text when collapsed */
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    color: #ffffff;
+}
+
+.navbar .active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Transition effect for collapsing */
+.navbar.collapsed .nav-links a {
+    display: none; /* Hide text when collapsed */
+}
+/* General Page Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+
+.navbar a, .navbar .login-btn {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ddd;
+    display: block;
+    transition: 0.3s;
+}
+
+.navbar a:hover, .navbar .login-btn:hover {
+    background-color: #575757;
+}
+
+.toggle-btn {
+    font-size: 22px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #ddd;
+}
+
+/* Collapsed Navbar Style */
+.navbar.collapsed {
+    width: 60px;
+}
+
+.navbar.collapsed a span {
+    display: none;
+}
+
+/* Main content wrapper to fill available space */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 260px;
+    transition: margin-left 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar.collapsed ~ .main-content {
+    margin-left: 70px;
+}
+
+/* Header Styles */
+header {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Highlight Class for Important Sections */
+.highlight {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #ddd;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+/* General Page Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px; /* Space between top of navbar and content */
+}
+
+.toggle-btn {
+    font-size: 22px;
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #ddd;
+    background-color: #444;
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #575757;
+}
+
+/* Content of Navbar (adjusted to be below the toggle button) */
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add spacing between navbar items */
+    margin-top: 20px; /* Space below the collapse button */
+}
+
+.navbar a, .navbar .login-btn {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ddd;
+    display: block;
+    transition: 0.3s;
+    margin-bottom: 5px; /* Space between links */
+    border-radius: 4px; /* Rounded corners for better visual */
+}
+
+.navbar a:hover, .navbar .login-btn:hover {
+    background-color: #575757;
+}
+
+/* Collapsed Navbar Style */
+.navbar.collapsed {
+    width: 60px;
+}
+
+.navbar.collapsed .nav-content a span {
+    display: none;
+}
+
+.navbar.collapsed .nav-content .login-btn span {
+    display: none;
+}
+
+/* Main content wrapper to fill available space */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 260px;
+    transition: margin-left 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar.collapsed ~ .main-content {
+    margin-left: 70px;
+}
+
+/* Header Styles */
+header {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.popup-content {
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #ddd;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Navbar Styles */
+.navbar {
+    width: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px; /* Increased space between top of navbar and content */
+}
+
+.toggle-btn {
+    font-size: 22px;
+    padding: 20px; /* Increased padding for a larger button */
+    cursor: pointer;
+    color: #ddd;
+    background-color: #444;
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 100%;
+    transition: background-color 0.3s;
+    margin-bottom: 40px; /* Added space below the collapse button */
+}
+
+/* Content of Navbar (adjusted to be even lower below the toggle button) */
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased spacing between navbar items */
+    margin-top: 50px; /* More space below the toggle button */
+}
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 250px;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.navbar a {
+    color: #ddd;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+.navbar .toggle-btn {
+    font-size: 22px;
+    padding: 15px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* Home Section */
+.home-section, .gallery-section, .search-section, .student-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.home-section h2, .gallery-section h2, .search-section h2, .student-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Links inside sections */
+a.view-gallery-link {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.view-gallery-link:hover {
+    text-decoration: underline;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+}
+
+.popup-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content label, .popup-content input {
+    margin-bottom: 10px;
+}
+
+.popup-content button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+    background-color: #575757;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10A3_CBQ_GL</title>
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="navbar" id="navbar">
+        <!-- Toggle button for collapsing the navbar -->
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+        <!-- Content of the Navbar -->
+        <div class="nav-content">
+            <a href="#home" class="active"><span>Trang chủ</span></a>
+            <a href="kho_anh.html"><span>Kho ảnh và video</span></a> <!-- Link to kho_anh.html -->
+            <button class="login-btn" onclick="openSearchPopup()"><span>Tìm học sinh</span></button>
+        </div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-content" id="mainContent">
+        <!-- Header Section -->
+        <header>
+            <h1>Chào mừng đến với A3-k64</h1>
+        </header>
+
+        <!-- Home Section -->
+        <div class="home-section" id="home">
+            <h2>Nơi xả ảnh của a3-K64-CBQ</h2>
+            <p>Dòng thời gian của lớp!</p>
+            <a href="kho_anh.html" class="view-gallery-link">Xem Kho ảnh và Video</a> <!-- Link to kho_anh.html -->
+        </div>
+
+        <!-- Tìm học sinh Popup -->
+        <div id="searchPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closeSearchPopup()">&times;</span>
+                <h2>Tìm Học Sinh</h2>
+                <form id="searchStudentForm">
+                    <label for="birthdate">Ngày Tháng Năm Sinh:</label>
+                    <input type="date" id="birthdate" required>
+                    <button type="button" onclick="searchStudent()">Tìm</button>
+                </form>
+                <p id="searchErrorMessage" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>Copyright by Rạp Siếc TW!</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript File Link -->
+    <script src="script.js"></script>
+
+</body>
+</html>
